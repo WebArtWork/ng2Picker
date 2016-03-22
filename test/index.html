@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title>ngPicker Test Page</title>
+    <link rel="stylesheet" href="../compile/unminified/ng-picker.css" />
+    <style>
+    </style>
+</head>
+
+<body ng-controller="Ctrl">
+
+    <h1>Ng Picker</h1>
+
+    <div waw-datepicker opts="datepicker"></div>
+    <div waw-datetimepicker opts="datetimepicker"></div>
+    <div waw-timepicker opts="timepicker"></div>
+    <div waw-colorpicker opts="colorpicker"></div>
+
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../compile/unminified/ng-picker.js?1"></script>
+    <script type="text/javascript">
+    angular.module('app', ['ngImgCrop'])
+        .controller('Ctrl', function($scope) {
+            $scope.datepicker={};
+            $scope.datetimepicker={};
+            $scope.timepicker={};
+            $scope.colorpicker={};
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+{
+    "name": "ng-picker",
+    "prettyName": "ngPicker",
+    "version": "0.0.1",
+    "authors": [{
+        "name": "Sergei Bugai",
+        "email": ""
+    }, {
+        "name": "Honchar Denys",
+        "email": "crackeraki@gmail.com"
+    }],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/WebArtWork/ngPicker"
+    },
+    "description": "Picker for angular which pick date, time and color.",
+    "main": [
+        "compile/minified/ng-img-crop.js",
+        "compile/minified/ng-img-crop.css"
+    ],
+    "keywords": [
+        "angular",
+        "time",
+        "date",
+        "color",
+        "datepicker",
+        "timepicker",
+        "colorpicker",
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/WebArtWork/ngPicker",
+    "ignore": [
+        "node_modules",
+        "bower_components",
+        "test"
+    ],
+    "devDependencies": {
+        "angular": "1.5.x"
+    }
+}
