@@ -49,7 +49,6 @@ pic.directive('wawDatepicker', ['$parse',
                     };
                 })();
                 $scope.YearIAndMonthSwith = "";
-                console.log($scope.style)
             },
             scope: {
                 opts: '=',
@@ -98,15 +97,22 @@ pic.directive('wawDatepicker', ['$parse',
                     scope.weeks = weeks; // Week Array
                     scope.dayInMonth = [];
                     scope.showDays = function() {
+                        scope.daysInMonth = [];
                         if (scope.dayInMonth.length > 0) {
                             scope.dayInMonth = [];
                         } else {
-                            for (var i = 1; i <= 31; i++) {
-                                scope.dayInMonth.push(i);
+                            for (var i = 0; i < scope.weeks.length; i++) {
+                                for (var y = 0; y < scope.weeks[i].length; y++) {
+                                    if (!scope.weeks[i][y].notCurrentMonth) {
+                                        scope.daysInMonth.push(scope.weeks[i][y])
+                                        scope.dayInMonth.push(scope.daysInMonth.length)
+                                    }
+                                }
                             }
-                        };
+                        }
                     };
                     scope.showMonth = function() {
+
                         if (scope.monthShow == true) {
                             scope.monthShow = false;
                         } else {

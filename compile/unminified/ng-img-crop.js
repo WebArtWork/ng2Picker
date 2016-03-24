@@ -5,7 +5,7 @@
  * Copyright (c) 2016 undefined
  * License: MIT
  *
- * Generated at Thursday, March 24th, 2016, 4:55:42 PM
+ * Generated at Friday, March 25th, 2016, 1:07:55 AM
  */
 (function() {
 var pic = angular.module('ngPicker', []);
