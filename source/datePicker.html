@@ -1,0 +1,74 @@
+   <div class="datePicker">
+        <label ng-click="selectDate()">
+            <input type="text" ng-model="currentDateObj.date" disabled>
+        </label>
+        <div ng-show="selecting">
+           <table ng-switch on="YearIAndMonthSwith">
+               <thead>
+                    <tr>
+                        
+                    </tr>
+                    <tr class="navigation">
+                       <td ng-click="prevYear()">&lt;&lt;</td>
+                       <td ng-click="prev()">&lt;</td>
+                       <td class="currentDate" colspan="7" ng-click="setYearIAndMonth('month')" >{{displayDate[1]}}</td>
+                       <td class="currentDate" colspan="7" ng-click="setYearIAndMonth('years')" >{{displayDate[3]}}</td>
+                       <td ng-click="next()">&gt;</td>
+                       <td ng-click="nextYear()">&gt;&gt;</td>
+                    </tr>
+                </thead>
+                    
+               
+               <tbody ng-switch-default>
+                    <tr>
+                        <td  ng-repeat="day in days" ng-bind="day"></td>
+                    </tr>
+               <tr ng-repeat="week in weeks" class="week">
+                    <td  ng-repeat="d in week" ng-click="selectDay(d)" ng-class="{active: d.selected, otherMonth: d.notCurrentMonth}">{{ d.day | date: &#39;d&#39;}}</td>
+               </tr>
+               </tbody>
+               <tbody ng-switch-when="years">
+               <tr  class="week">
+                    <td  ng-repeat="y in years" ng-click="setYear(y)" ng-class="{active: d.selected, otherMonth: d.notCurrentMonth}">{{ y}}</td>
+               </tr>
+               </tbody>
+                <tbody ng-switch-when="month">
+               <tr  class="week">
+                    <td  ng-repeat="m in months" ng-click="setMonth(m)" ng-class="{active: d.selected, otherMonth: d.notCurrentMonth}">{{ m}}</td>
+               </tr>
+               </tbody>
+           </table>
+        </div>
+   </div>
+    <div>
+       <input type="text" maxlength=2  placeholder="{{currentDateObj.day}}" ng-model="currentDateObj.day" ng-change="setDayAuto(currentDateObj.day)">
+       <button ng-click="showDays()">Down</button>
+       <h3 ng-repeat="d in dayInMonth track by $index" ng-model="currentDateObj.day" ng-click="setDay(d)" >{{ d }}</h3>
+    </div> 
+    <div >
+       <input type="text" maxlength=2 placeholder="{{currentDateObj.month}}" ng-model="currentDateObj.month" ng-change="setMonthAuto(currentDateObj.month)">
+       <button ng-click="showMonth()">Down</button>
+       <h3 ng-if="monthShow" ng-repeat="m in months" ng-click="setMonth(m)">{{ m}}</h3>
+    </div> 
+     <div>
+       <input type="text" maxlength=4 placeholder="{{currentDateObj.year}}" ng-model="currentDateObj.year" ng-change="setYearAuto(currentDateObj.year)">
+       <button ng-click="showYear()">Down</button>
+       <h3 ng-if="yearsShow" ng-repeat="y in years" ng-click="setYear(y)">{{ y}}</h3>
+    </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

@@ -3,7 +3,7 @@
 
 <head>
     <title>ngPicker Test Page</title>
-    <link rel="stylesheet" href="../compile/unminified/ng-picker.css" />
+   <!--  <link rel="stylesheet" href="../compile/unminified/ng-picker.css" /> -->
     <style>
     </style>
 </head>
@@ -12,22 +12,27 @@
 
     <h1>Ng Picker</h1>
 
-    <div waw-datepicker opts="datepicker"></div>
+    <div waw-datepicker style="1"></div>
+    <div waw-datepicker style="2"></div>
     <div waw-datetimepicker opts="datetimepicker"></div>
     <div waw-timepicker opts="timepicker"></div>
     <div waw-colorpicker opts="colorpicker"></div>
 
     <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="../compile/unminified/ng-picker.js?1"></script>
+    <script type="text/javascript" src="../source/js/init.js"></script>
+    <script type="text/javascript" src="../source/js/ng-picker.js"></script>
+
     <script type="text/javascript">
-    angular.module('app', ['ngImgCrop'])
+    angular.module('app', ['ngPicker'])
         .controller('Ctrl', function($scope) {
             $scope.datepicker={};
             $scope.datetimepicker={};
             $scope.timepicker={};
             $scope.colorpicker={};
+            $scope.qwerty = "qwerty"
         });
     </script>
+
 </body>
 
 </html>
