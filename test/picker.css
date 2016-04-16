@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    padding: 50px;
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+* {
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.picker-row {
+    background: #3498DB;
+    display: inline-block;
+    color: white;
+    position: relative;
+    cursor: default;
+    padding-right: 10px;
+}
+
+.dp-box {
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 327px;
+    background: #ECF0F1;
+    font-size: 16px;
+}
+
+.navigation {
+    background: #16A085;
+    font-size: 0;
+}
+
+.dp-nav-item {
+    display: inline-block;
+    width: 14.14%;
+    text-align: center;
+    padding: 7px 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #ECF0F1;
+    font-weight: bold;
+}
+
+.dp-nav-item.dp-navitemtext {
+    width: 71px;
+    height: 37px;
+    vertical-align: top;
+}
+
+.dp-nav-item i {
+    font-size: 20px;
+}
+
+.dp-nav-item:hover {
+    background: #1ABC9C;
+}
+
+.dp-input {
+    display: inline-block;
+    border: none;
+    margin: 10px 5px 0 5px;
+    color: #0d0d0d;
+    font-size: 16px;
+    outline: 0;
+    background-color: white;
+    box-shadow: inset 0 0 0 1px #2980B9;
+    padding: 6px 5px;
+    text-align: center;
+}
+
+.dp-inputbox {
+    display: inline-block;
+    height: 60px;
+    vertical-align: top;
+    position: relative;
+    width: 80px;
+    text-align: center;
+}
+
+.dp-input.date-input {
+    width: 70px;
+}
+
+.dp-input.mounth-input {
+    width: 70px;
+}
+
+.dp-input.year-input {
+    width: 70px;
+}
+
+.calendar-ico {
+    font-size: 26px !important;
+    display: inline-block !important;
+    vertical-align: sub;
+    cursor: pointer;
+    padding: 18px 19px;
+}
+
+.calendar-ico:hover {
+    background: #2980B9;
+}
+
+.input-caret {
+    font-size: 20px !important;
+    width: 70px;
+    vertical-align: top;
+    height: 22px;
+}
+
+.input-caret:hover {
+    background: #2980B9;
+}
+
+.input-caret:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.dp-selectwrapper-d {
+    top: 62px;
+    position: absolute;
+    left: -67px;
+    width: 327px;
+    background: #ECF0F1;
+    text-align: left;
+}
+
+.dp-selectwrapper-m {
+    top: 62px;
+    position: absolute;
+    left: -152px;
+    width: 327px;
+    background: #ECF0F1;
+    text-align: left;
+}
+
+.dp-selectwrapper-y {
+    top: 62px;
+    position: absolute;
+    left: -237px;
+    width: 327px;
+    background: #ECF0F1;
+    text-align: left;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.dp-select-day {
+    display: inline-block;
+    width: 16.66%;
+    text-align: center;
+    padding: 7px 5px;
+    color: #34495E;
+    font-weight: bold;
+}
+
+.dp-select-m {
+    display: inline-block;
+    width: 109px;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 18px;
+    color: #34495E;
+    font-weight: bold;
+}
+
+.dp-select-y {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+    color: #34495E;
+    font-weight: bold;
+}
+.dp-y-box {
+    width: 327px;
+    background: #ECF0F1;
+    text-align: left;
+    max-height: 200px;
+    overflow: auto;
+}
+.dp-select-dofw {
+    display: inline-block;
+    width: 14.27%;
+    text-align: center;
+    padding: 7px 5px;
+    color: #3498DB;
+    font-size: 16px;
+}
+
+.dp-select-dweek {
+    display: inline-block;
+    width: 14.222%;
+    text-align: center;
+    padding: 5px;
+    color: #34495E;
+    font-weight: bold;
+}
+
+.dp-select-dweek.otherMonth {
+    color: #7F8C8D;
+    font-weight: normal;
+}
+
+.dp-select-day:hover {
+    background: #95A5A6;
+    cursor: pointer;
+    color: white;
+}
+
+.dp-select-m:hover {
+    background: #95A5A6;
+    cursor: pointer;
+    color: white;
+}
+
+.dp-select-y:hover {
+    background: #95A5A6;
+    cursor: pointer;
+    color: white;
+}
+
+.dp-select-dweek:hover {
+    background: #95A5A6;
+    cursor: pointer;
+    color: white;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #BDC3C7;
+    border-width: 0px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #34495E;
+}
+
+.dp-days {
+    width: 100px;
+}
