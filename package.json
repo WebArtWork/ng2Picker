@@ -6,7 +6,7 @@
         "name": "Honchar Denys",
         "email": "crackeraki@gmail.com"
     }],
-    "name": "ng-picker",
+    "name": "ngPicker",
     "prettyName": "ngPicker",
     "version": "0.0.1",
     "description": "Picker for angular which pick date, time and color.",
